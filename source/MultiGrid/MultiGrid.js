@@ -437,6 +437,8 @@ class MultiGrid extends React.PureComponent {
       resetAll ||
       height !== this._lastRenderedHeight ||
       width !== this._lastRenderedWidth;
+
+      console.log('size change: ' + sizeChange);
     const leftSizeChange =
       resetAll ||
       columnWidth !== this._lastRenderedColumnWidth ||
