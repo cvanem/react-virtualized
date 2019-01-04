@@ -286,6 +286,7 @@ var Grid = function (_React$PureComponent) {
           _ref2$scrollTop = _ref2.scrollTop,
           scrollTopParam = _ref2$scrollTop === undefined ? 0 : _ref2$scrollTop;
 
+          return;
       // On iOS, we can arrive at negative offsets by swiping past the start.
       // To prevent flicker here, we make playing in the negative offset zone cause nothing to happen.
       if (scrollTopParam < 0) {
