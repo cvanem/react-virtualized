@@ -338,6 +338,7 @@ var Grid = function (_React$PureComponent) {
         }
 
         newState.needToResetStyleCache = false;
+        console.log('ns:' + JSON.stringify(newState));
         this.setState(newState);
       }
 
