@@ -1018,11 +1018,16 @@ var Grid = (function(_React$PureComponent) {
               },
             );
 
+            visibleColumnIndices.stop = 5;
+
             // Store for _invokeOnGridRenderedHelper()
             this._renderedColumnStartIndex = visibleColumnIndices.start;
             this._renderedColumnStopIndex = visibleColumnIndices.stop;
             this._renderedRowStartIndex = visibleRowIndices.start;
             this._renderedRowStopIndex = visibleRowIndices.stop;
+
+            console.log('vs:');
+            console.log(visibleColumnIndicies);
 
             console.log({
               direction: 'horizontal',
@@ -1069,8 +1074,7 @@ var Grid = (function(_React$PureComponent) {
                   : -1,
             });
 
-            // Store for _invokeOnGridRenderedHelper()
-            overscanColumnIndices.overscanStopIndex=5;
+            // Store for _invokeOnGridRenderedHelper()            
             var columnStartIndex = overscanColumnIndices.overscanStartIndex;
             var columnStopIndex = overscanColumnIndices.overscanStopIndex;
             var rowStartIndex = overscanRowIndices.overscanStartIndex;
