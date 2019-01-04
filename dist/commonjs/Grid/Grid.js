@@ -1018,6 +1018,10 @@ var Grid = (function(_React$PureComponent) {
               },
             );
 
+
+            console.log('vo:' + verticalOffsetAdjustment);
+            console.log('ho:' + horizontalOffsetAdjustment);
+
             visibleColumnIndices.stop = 5;
             visibleRowIndices.stop = visibleRowIndices.start + 10;
 
