@@ -1019,6 +1019,7 @@ var Grid = (function(_React$PureComponent) {
             );
 
             visibleColumnIndices.stop = 5;
+            visibleRowIndices.stop = visibleRowIndices.start + 10;
 
             // Store for _invokeOnGridRenderedHelper()
             this._renderedColumnStartIndex = visibleColumnIndices.start;
