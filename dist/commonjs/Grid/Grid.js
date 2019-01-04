@@ -922,6 +922,7 @@ var Grid = (function(_React$PureComponent) {
           );
           console.log('show content render:');
           console.log(showNoContentRenderer);
+          style.position = 'static';
           return React.createElement(
             'div',
             (0, _extends3.default)(
