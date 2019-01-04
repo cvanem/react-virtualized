@@ -316,6 +316,15 @@ var Grid = function (_React$PureComponent) {
       // Don't force a re-render if this is the case.
       // The mouse may move faster then the animation frame does.
       // Use requestAnimationFrame to avoid over-updating.
+
+      if(scrollLeft=="0" || scrollLeft==0) {
+        return;
+      }
+      
+      if(scrollTop=="0" || scrollTop==0) {
+        return;
+      }
+
       if (this.state.scrollLeft !== scrollLeft || this.state.scrollTop !== scrollTop) {
         // Track scrolling direction so we can more efficiently overscan rows to reduce empty space around the edges while scrolling.
         // Don't change direction for an axis unless scroll offset has changed.
