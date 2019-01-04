@@ -136,6 +136,7 @@ var Grid = function (_React$PureComponent) {
     _this._debounceScrollEndedCallback = function () {
       _this._disablePointerEventsTimeoutId = null;
       // isScrolling is used to determine if we reset styleCache
+      console.log('debounce');
       _this.setState({
         isScrolling: false,
         needToResetStyleCache: false
@@ -317,13 +318,14 @@ var Grid = function (_React$PureComponent) {
       // The mouse may move faster then the animation frame does.
       // Use requestAnimationFrame to avoid over-updating.
 
-      if(scrollLeft=="0" || scrollLeft==0) {
+      /*if(scrollLeft=="0" || scrollLeft==0) {
         return;
       }
       
       if(scrollTop=="0" || scrollTop==0) {
         return;
       }
+      */
 
       if (this.state.scrollLeft !== scrollLeft || this.state.scrollTop !== scrollTop) {
         // Track scrolling direction so we can more efficiently overscan rows to reduce empty space around the edges while scrolling.
@@ -486,6 +488,7 @@ var Grid = function (_React$PureComponent) {
       // If this component was first rendered server-side, scrollbar size will be undefined.
       // In that event we need to remeasure.
       if (!instanceProps.scrollbarSizeMeasured) {
+        console.log('scrollbarsizemeasured');
         this.setState(function (prevState) {
           var stateUpdate = (0, _extends3.default)({}, prevState, { needToResetStyleCache: false });
           stateUpdate.instanceProps.scrollbarSize = getScrollbarSize();
@@ -502,6 +505,7 @@ var Grid = function (_React$PureComponent) {
         });
         if (stateUpdate) {
           stateUpdate.needToResetStyleCache = false;
+          console.log('stateupdate')
           this.setState(stateUpdate);
         }
       }
@@ -1023,7 +1027,7 @@ var Grid = function (_React$PureComponent) {
 
 
         this._scrollbarPresenceChanged = false;
-
+        console.log('scrollbar changed: ' + horizontal + ',' + size + ',' + vertical);
         _onScrollbarPresenceChange({
           horizontal: this._horizontalScrollBarSize > 0,
           size: this.state.instanceProps.scrollbarSize,
@@ -1043,6 +1047,7 @@ var Grid = function (_React$PureComponent) {
       var scrollLeft = _ref8.scrollLeft,
           scrollTop = _ref8.scrollTop;
 
+
       var stateUpdate = Grid._getScrollToPositionStateUpdate({
         prevState: this.state,
         scrollLeft: scrollLeft,
@@ -1051,6 +1056,7 @@ var Grid = function (_React$PureComponent) {
 
       if (stateUpdate) {
         stateUpdate.needToResetStyleCache = false;
+        console.log('scroll to position: ' + scrollLeft + ',' + scrollTop);
         this.setState(stateUpdate);
       }
     }
@@ -1071,6 +1077,7 @@ var Grid = function (_React$PureComponent) {
       var stateUpdate = Grid._getScrollLeftForScrollToColumnStateUpdate(props, state);
       if (stateUpdate) {
         stateUpdate.needToResetStyleCache = false;
+        console.log('update scroll left for scroll to column');
         this.setState(stateUpdate);
       }
     }
@@ -1120,6 +1127,7 @@ var Grid = function (_React$PureComponent) {
       var stateUpdate = Grid._getScrollTopForScrollToRowStateUpdate(props, state);
       if (stateUpdate) {
         stateUpdate.needToResetStyleCache = false;
+        console.log('update scrolltop');
         this.setState(stateUpdate);
       }
     }
