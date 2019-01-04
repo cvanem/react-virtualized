@@ -328,9 +328,7 @@ var Grid = function (_React$PureComponent) {
       }
       */
 
-      if (this.state.scrollLeft !== scrollLeft || this.state.scrollTop !== scrollTop) {
-
-        return;
+      if (this.state.scrollLeft !== scrollLeft || this.state.scrollTop !== scrollTop) {        
         // Track scrolling direction so we can more efficiently overscan rows to reduce empty space around the edges while scrolling.
         // Don't change direction for an axis unless scroll offset has changed.
         var _scrollDirectionHorizontal = scrollLeft !== this.state.scrollLeft ? scrollLeft > this.state.scrollLeft ? _defaultOverscanIndicesGetter.SCROLL_DIRECTION_FORWARD : _defaultOverscanIndicesGetter.SCROLL_DIRECTION_BACKWARD : this.state.scrollDirectionHorizontal;
@@ -356,12 +354,13 @@ var Grid = function (_React$PureComponent) {
         this.setState(newState);
       }
 
-      this._invokeOnScrollMemoizer({
+      /*this._invokeOnScrollMemoizer({
         scrollLeft: scrollLeft,
         scrollTop: scrollTop,
         totalColumnsWidth: totalColumnsWidth,
         totalRowsHeight: totalRowsHeight
       });
+      */
     }
 
     /**
