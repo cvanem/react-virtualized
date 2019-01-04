@@ -947,7 +947,7 @@ var Grid = (function(_React$PureComponent) {
                   style: (0, _extends3.default)(
                     {
                       width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-                      height: totalRowsHeight,
+                      height: 32000, //totalRowsHeight,
                       maxWidth: totalColumnsWidth,
                       maxHeight: totalRowsHeight,
                       overflow: 'hidden',
