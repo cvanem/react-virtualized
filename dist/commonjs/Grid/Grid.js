@@ -1026,8 +1026,10 @@ var Grid = (function(_React$PureComponent) {
             this._renderedRowStartIndex = visibleRowIndices.start;
             this._renderedRowStopIndex = visibleRowIndices.stop;
 
-            console.log('vs:');
+            console.log('vc:');            
             console.log(visibleColumnIndicies);
+            console.log('vr:');
+            console.log(visibleRowIndicies);
 
             console.log({
               direction: 'horizontal',
