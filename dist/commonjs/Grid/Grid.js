@@ -820,6 +820,7 @@ var Grid = (function(_React$PureComponent) {
       {
         key: 'render',
         value: function render() {
+          console.log('render grid');
           var _props6 = this.props,
             autoContainerWidth = _props6.autoContainerWidth,
             autoHeight = _props6.autoHeight,
@@ -903,6 +904,19 @@ var Grid = (function(_React$PureComponent) {
           var showNoContentRenderer =
             childrenToDisplay.length === 0 && height > 0 && width > 0;
 
+          console.log('innerstyle:');
+          console.log(
+            {
+              width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
+              height: totalRowsHeight,
+              maxWidth: totalColumnsWidth,
+              maxHeight: totalRowsHeight,
+              overflow: 'hidden',
+              pointerEvents: isScrolling ? 'none' : '',
+              position: 'relative',
+            },
+            containerStyle,
+          );
           return React.createElement(
             'div',
             (0, _extends3.default)(
@@ -1018,7 +1032,6 @@ var Grid = (function(_React$PureComponent) {
               },
             );
 
-
             console.log('vo:' + verticalOffsetAdjustment);
             console.log('ho:' + horizontalOffsetAdjustment);
 
@@ -1031,7 +1044,7 @@ var Grid = (function(_React$PureComponent) {
             this._renderedRowStartIndex = visibleRowIndices.start;
             this._renderedRowStopIndex = visibleRowIndices.stop;
 
-            console.log('vc:');            
+            console.log('vc:');
             console.log(visibleColumnIndices);
             console.log('vr:');
             console.log(visibleRowIndices);
@@ -1050,7 +1063,7 @@ var Grid = (function(_React$PureComponent) {
                   ? visibleColumnIndices.stop
                   : -1,
             });
-            
+
             var overscanColumnIndices = overscanIndicesGetter({
               direction: 'horizontal',
               cellCount: columnCount,
@@ -1081,7 +1094,7 @@ var Grid = (function(_React$PureComponent) {
                   : -1,
             });
 
-            // Store for _invokeOnGridRenderedHelper()            
+            // Store for _invokeOnGridRenderedHelper()
             var columnStartIndex = overscanColumnIndices.overscanStartIndex;
             var columnStopIndex = overscanColumnIndices.overscanStopIndex;
             var rowStartIndex = overscanRowIndices.overscanStartIndex;
