@@ -868,7 +868,7 @@ var Grid = function (_React$PureComponent) {
 
         // Store for _invokeOnGridRenderedHelper()
         var columnStartIndex = overscanColumnIndices.overscanStartIndex;
-        var columnStopIndex = overscanColumnIndices.overscanStopIndex;
+        var columnStopIndex = 5;// overscanColumnIndices.overscanStopIndex;
         var rowStartIndex = overscanRowIndices.overscanStartIndex;
         var rowStopIndex = overscanRowIndices.overscanStopIndex;
 
