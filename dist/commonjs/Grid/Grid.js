@@ -354,13 +354,13 @@ var Grid = function (_React$PureComponent) {
         this.setState(newState);
       }
 
-      /*this._invokeOnScrollMemoizer({
+      this._invokeOnScrollMemoizer({
         scrollLeft: scrollLeft,
         scrollTop: scrollTop,
         totalColumnsWidth: totalColumnsWidth,
         totalRowsHeight: totalRowsHeight
       });
-      */
+      
     }
 
     /**
