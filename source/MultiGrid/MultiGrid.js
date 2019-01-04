@@ -684,7 +684,7 @@ class MultiGrid extends React.PureComponent {
         columnCount={Math.max(0, columnCount - fixedColumnCount)}
         columnWidth={this._columnWidthRightGrid}
         deferredMeasurementCache={this._deferredMeasurementCacheBottomRightGrid}
-        height={2050}
+        height={this._getBottomGridHeight(props)}
         onScroll={this._onScroll}
         onScrollbarPresenceChange={this._onScrollbarPresenceChange}
         ref={this._bottomRightGridRef}
@@ -692,7 +692,7 @@ class MultiGrid extends React.PureComponent {
         rowHeight={this._rowHeightBottomGrid}
         scrollToColumn={scrollToColumn - fixedColumnCount}
         scrollToRow={scrollToRow - fixedRowCount}
-        style={{...this._bottomRightGridStyle, height: 1500}}
+        style={this._bottomRightGridStyle}
         width={this._getRightGridWidth(props)}
       />
     );
