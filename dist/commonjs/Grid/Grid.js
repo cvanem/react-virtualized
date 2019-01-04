@@ -908,7 +908,7 @@ var Grid = (function(_React$PureComponent) {
           console.log(
             {
               width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-              height: totalRowsHeight,
+              height: 32000, //totalRowsHeight,
               maxWidth: totalColumnsWidth,
               maxHeight: totalRowsHeight,
               overflow: 'hidden',
@@ -917,6 +917,8 @@ var Grid = (function(_React$PureComponent) {
             },
             containerStyle,
           );
+          console.log('show content render:');
+          console.log(showNoContentRenderer);
           return React.createElement(
             'div',
             (0, _extends3.default)(
