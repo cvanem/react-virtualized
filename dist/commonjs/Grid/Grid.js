@@ -293,7 +293,7 @@ var Grid = function (_React$PureComponent) {
       }
 
       // Prevent pointer events from interrupting a smooth scroll
-      this._debounceScrollEnded();
+      //this._debounceScrollEnded();
 
       var _props = this.props,
           autoHeight = _props.autoHeight,
