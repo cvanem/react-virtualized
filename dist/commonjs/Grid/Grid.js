@@ -903,7 +903,10 @@ var Grid = (function(_React$PureComponent) {
 
           var showNoContentRenderer =
             childrenToDisplay.length === 0 && height > 0 && width > 0;
-
+          console.log('gridstyle:');
+          console.log(gridStyle);
+          console.log('extended style');
+          console.log(style);
           console.log('innerstyle:');
           console.log(
             {
@@ -913,7 +916,7 @@ var Grid = (function(_React$PureComponent) {
               maxHeight: 32000, //totalRowsHeight,
               overflow: 'hidden',
               pointerEvents: isScrolling ? 'none' : '',
-              position: 'fixed',//relative',
+              position: 'fixed', //relative',
             },
             containerStyle,
           );
@@ -951,10 +954,10 @@ var Grid = (function(_React$PureComponent) {
                       width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
                       height: 32000, //totalRowsHeight,
                       maxWidth: totalColumnsWidth,
-                      maxHeight: 32000,//totalRowsHeight,
+                      maxHeight: 32000, //totalRowsHeight,
                       overflow: 'hidden',
                       pointerEvents: isScrolling ? 'none' : '',
-                      position: 'fixed',//relative',
+                      position: 'fixed', //relative',
                     },
                     containerStyle,
                   ),
