@@ -932,7 +932,7 @@ var Grid = (function(_React$PureComponent) {
                   role: containerRole,
                   style: (0, _extends3.default)(
                     {
-                      width: autoContainerWidth ? 'auto' : totalColumnsWidth,
+                      width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
                       height: totalRowsHeight,
                       maxWidth: totalColumnsWidth,
                       maxHeight: totalRowsHeight,
