@@ -429,7 +429,7 @@ var Grid = function (_React$PureComponent) {
       // Invalid row heights likely mean invalid cached content as well.
       this._styleCache = {};
       this._cellCache = {};
-
+      console.log('recomputing grid size');
       this.forceUpdate();
     }
 
@@ -924,6 +924,12 @@ var Grid = function (_React$PureComponent) {
         this._columnStopIndex = columnStopIndex;
         this._rowStartIndex = rowStartIndex;
         this._rowStopIndex = rowStopIndex;
+        console.log('in:' + JSON.stringify({
+          columnStartIndex,
+          columnStopIndex,
+          rowStartIndex,
+          rowStopIndex,
+        }))
       }
     }
 
