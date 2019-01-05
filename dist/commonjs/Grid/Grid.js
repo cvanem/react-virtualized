@@ -911,9 +911,9 @@ var Grid = (function(_React$PureComponent) {
           console.log(
             {
               width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-              height: 600, //totalRowsHeight,
+              height: 2000, //totalRowsHeight,
               maxWidth: totalColumnsWidth,
-              maxHeight: 600, //totalRowsHeight,
+              maxHeight: 2000, //totalRowsHeight,
               overflow: 'hidden',
               pointerEvents: isScrolling ? 'none' : '',
               position: 'relative',
@@ -953,9 +953,9 @@ var Grid = (function(_React$PureComponent) {
                   style: (0, _extends3.default)(
                     {
                       width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-                      height: 600, //totalRowsHeight,
+                      height: 2000, //totalRowsHeight,
                       maxWidth: totalColumnsWidth,
-                      maxHeight: 600, //totalRowsHeight,
+                      maxHeight: 2000, //totalRowsHeight,
                       overflow: 'hidden',
                       pointerEvents: isScrolling ? 'none' : '',
                       position: 'relative',
