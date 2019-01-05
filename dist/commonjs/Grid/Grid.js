@@ -911,12 +911,12 @@ var Grid = (function(_React$PureComponent) {
           console.log(
             {
               width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-              height: 32000, //totalRowsHeight,
+              height: 600, //totalRowsHeight,
               maxWidth: totalColumnsWidth,
-              maxHeight: 32000, //totalRowsHeight,
+              maxHeight: 600, //totalRowsHeight,
               overflow: 'hidden',
               pointerEvents: isScrolling ? 'none' : '',
-              position: 'fixed', //relative',
+              position: relative',
             },
             containerStyle,
           );
@@ -953,9 +953,9 @@ var Grid = (function(_React$PureComponent) {
                   style: (0, _extends3.default)(
                     {
                       width: totalColumnsWidth, //autoContainerWidth ? 'auto' : totalColumnsWidth,
-                      height: 32000, //totalRowsHeight,
+                      height: 600, //totalRowsHeight,
                       maxWidth: totalColumnsWidth,
-                      maxHeight: 32000, //totalRowsHeight,
+                      maxHeight: 600, //totalRowsHeight,
                       overflow: 'hidden',
                       pointerEvents: isScrolling ? 'none' : '',
                       position: 'relative',
