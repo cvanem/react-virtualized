@@ -916,7 +916,7 @@ var Grid = (function(_React$PureComponent) {
               maxHeight: 600, //totalRowsHeight,
               overflow: 'hidden',
               pointerEvents: isScrolling ? 'none' : '',
-              position: relative',
+              position: 'relative',
             },
             containerStyle,
           );
